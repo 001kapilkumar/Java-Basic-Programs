@@ -1,0 +1,43 @@
+import java.util.*;
+public class Keith_number {
+
+static boolean isKeith(int num){
+    ArrayList<Integer> list = new ArrayList<Integer>() ;
+    int temp = num ;
+
+    int digit = 0 ;
+       while(temp>0){
+           int r = temp%10 ;
+           list.add(r);
+           temp = temp/10 ;
+           digit ++ ;
+       }
+       Collections.reverse(list);
+
+       int next_value = 0 ;
+       int i = digit ;
+       while(next_value < num){
+           next_value = 0;
+
+           for(int j = 1 ; j<=digit ; j++){
+               next_value = next_value + list.get(i-j);
+
+           }
+           list.add(next_value);
+           i++ ;
+       }
+       return(next_value == num);
+
+}
+public static void main(String [] args){
+    if(isKeith(67)){
+        System.out.println("Keith number");
+    }
+    else{
+        System.out.println("Not a keith number");
+    }
+   //   System.out.println(list);
+}
+
+
+}
