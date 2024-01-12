@@ -1,0 +1,34 @@
+import java.util.*;
+public class N_Prime_Number {
+    static boolean isPrime(int num){
+        for(int i = 2 ; i<= Math.sqrt(num) ; i++){
+            while(num%i == 0){
+                return false ;
+            }
+            //return true ;
+        }
+        return true ;
+    }
+    static void Prime(int n ){
+
+    }
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number for nTH of prime number ");
+        int n = sc.nextInt() ;
+        ArrayList<Integer> list = new ArrayList<Integer>() ;
+        int digi =0 ;
+        for(int i = 2 ; i<1000; i++){
+            if(isPrime(i)){
+                list.add(i) ;
+            }
+            else{
+                digi++ ;
+            }
+        }
+        System.out.print(" n prime number be " + list.get(n-1)) ;
+
+
+    }
+
+}
