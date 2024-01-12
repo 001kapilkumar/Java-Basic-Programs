@@ -1,0 +1,42 @@
+import java.util.*;
+public class AutoBiographical_Number {
+    static boolean isAutobiographical(int num){
+        ArrayList<Integer> list = new ArrayList<Integer>() ;
+        int digits = 0;
+        int number = 0;
+        // num = 1210;
+        int n = num ;
+        while(num>0){
+            int r = num% 10 ;
+            list.add(r) ;
+            num = num / 10 ;
+            if(r>0){
+                digits  ++ ;
+            }
+            number++ ;
+
+        }
+        Collections.reverse(list) ;
+        //System.out.println(digits) ;
+        int sum = 0;
+        for(int i = 1; i<number ; i++){
+            sum = sum + list.get(i);
+        }
+        int minus = sum - list.get(0);
+        return(sum == digits) ;
+
+
+
+    }
+    public static void main(String [] args){
+        if(isAutobiographical(1210)){
+            System.out.println( "Autobiographical Number");
+        }
+        else{
+            System.out.println("Not Autobiographical Number");
+        }
+
+
+
+    }
+}
