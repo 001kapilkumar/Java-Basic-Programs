@@ -1,0 +1,21 @@
+import java.util.*;
+public class Bitwise_Operartor {
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number as 'a' ");
+        int a = sc.nextInt();
+        System.out.println("Enter a number as 'b' " );
+        int b = sc.nextInt() ;
+      //  int a = 578 ;
+       // int b = 80;
+        System.out.println("Numbers before exchange are ");
+        System.out.println(" a be " + a);
+        System.out.println(" b be " + b) ;
+        a = a*b;
+        b = a/b ;
+        a = a/  b ;
+        System.out.println("Numbers after exchange ");
+        System.out.println(" a be " + a) ;
+        System.out.println(" b be " + b);
+    }
+}
