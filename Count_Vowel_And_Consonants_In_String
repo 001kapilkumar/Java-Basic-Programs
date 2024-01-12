@@ -1,0 +1,18 @@
+public class Count_Vowel_And_Consonants_In_String {
+    public static void main(String[] args){
+        String s = "This is a really simple sentence" ;
+        int vowel_count =0 ;
+        int consonants_count = 0;
+        for(int i = 0; i<s.length();i++){
+            if(s.charAt(i) == 'a' ||s.charAt(i) == 'e' ||s.charAt(i) == 'i' ||s.charAt(i) == 'o'|| s.charAt(i) == 'u' ){
+                vowel_count++ ;
+            }
+            else if(s.charAt(i) != ' '){
+                consonants_count++;
+            }
+        }
+        System.out.println("Length of string be " + s.length());
+        System.out.println("Number of vowels in String be " + vowel_count);
+        System.out.println("Number of consonants in String be " + consonants_count);
+    }
+}
