@@ -1,0 +1,43 @@
+import java.util.*;
+public class Buzz_Number {
+    public static boolean isBuzz(int num) {
+
+
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        int digit = 0 ;
+        int digi = 1 ;
+        //int num = 1234;
+        int n = num;
+        while (num > 0) {
+            int r = num % 10;
+            list.add(r);
+            num = num / 10;
+        }
+       // System.out.println(list.get(0));
+        if(n % 7 == 0){
+            digit ++ ;
+
+        }
+        else{
+            digi++ ;
+
+        }
+        return(list.get(0) == 7 || digit == 1) ;
+
+
+    }
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number range for Buzz number");
+        int value = sc.nextInt();
+        for(int i = 1;i<value ;i++) {
+            if (isBuzz(i)) {
+
+                System.out.println(i);
+            } else {
+                System.out.print("");
+            }
+        }
+    }
+
+}
