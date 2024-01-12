@@ -1,0 +1,96 @@
+import java.util.* ;
+public class Smith_Number {
+    static boolean isPrime(int x){
+        int digit = 0 ;
+        for(int i = 2; i< x ; i++){
+            if(x % i == 0 ){
+                digit++ ;
+            }
+        }
+        return(digit == 0) ;
+    }
+    static boolean isSmith(int num){
+        ArrayList<Integer> list = new ArrayList<Integer>() ;
+        ArrayList<Integer> list1 = new ArrayList<Integer>() ;
+        String nu = String.valueOf(num) ;
+        int length4 = nu.length() ;
+        int sum1 = 0;
+        for(int m5= 0 ; m5 < length4 ; m5++){
+            char c2 = nu.charAt(m5) ;
+            int n3 = Integer.parseInt(String.valueOf(c2));
+            sum1 = sum1 + n3 ;
+        }
+        int n = num /2 ;
+        for(int j = 1; j<n ;j++){
+            if( num % j == 0){
+                list.add(j) ;
+                //System.out.print(j +" ");
+            }
+
+        }
+        int length = list.size() ;
+        System.out.println("length of list be " +length);
+        for(int m = 0 ; m<(length) ; m++){
+        if(isPrime(list.get(m))) {
+            list1.add(list.get(m));
+            //System.out.println(" list be " + list.get(m));
+            }
+        }
+
+        System.out.println(" list be " + list.get(0));
+        System.out.println(" list be " + list.get(1));
+        System.out.println(" list be " + list.get(2));
+        System.out.println(" list be " + list.get(3));
+        System.out.println(" list be " + list.get(4));
+        System.out.println(" list be " + list.get(5));
+        System.out.println(" list be " + list.get(6));
+
+        System.out.println(" list1 be " + list1.get(0));
+        System.out.println(" list1 be " + list1.get(1));
+        System.out.println(" list1 be " + list1.get(2));
+        int length1 = list1.size();
+        System.out.println("length of list be " + length);
+        System.out.println("length be list1   " + length1);
+
+        String str = "" ;
+        for(int m1 = 0 ; m1< length1 ; m1++){
+            //int n6 = list1.get(m1) ;
+
+
+            String s = String.valueOf(list1.get(m1)) ;
+            str = str + s  ;
+        }
+        System.out.println("str be " + str) ;
+        int length3 = str.length() ;
+        int sum = 0;
+        for(int m2 = 0 ;m2 < length3; m2++) {
+            char c = str.charAt(m2) ;
+            int a = Integer.parseInt(String.valueOf(c)) ;
+            sum = sum + a ;
+
+        }
+        System.out.println("sum of number  be  " + sum1);
+        System.out.println("sum of  number prime factors  be  " + sum);
+
+
+
+
+        return( sum1 == (sum-1)) ;
+        }
+        public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number ");
+        int value = sc.nextInt() ;
+      //  System.out.println("Enter end number");
+         //   int end = sc.nextInt() ;
+        //for(int y = start ; y< end ; y++) {
+            if (isSmith(value)) {
+                System.out.println("smith number ");
+            } else {
+                System.out.println(" Not smith number ");
+            }
+       // }
+
+
+        }
+    }
