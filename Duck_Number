@@ -1,0 +1,44 @@
+import java.util.*;
+public class import java.util.*;
+public class Duck_Number {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number to check for a duck number ");
+        String s = sc.nextLine();
+        int digit = 0;
+        int d = 0;
+        int length = s.length();
+
+
+
+
+        for(int i = 1; i<length ; i++){
+           // String s1 ;
+            char c = s.charAt(i) ;
+            int a = Integer.parseInt(String.valueOf(c));
+
+           if(a == 0)     {
+               digit ++ ;
+           }
+           else{
+               d++ ;
+           }
+
+        }
+        char m = s.charAt(0);
+
+        int z = Integer.parseInt(String.valueOf(m));
+        System.out.println(" z be "+ z);
+        System.out.println("Length be " + length) ;
+        System.out.println("digit be " + digit);
+        if(digit>0 && z != 0){
+            System.out.println("Duck number");
+        }
+        else{
+            System.out.println("Not duck Number");
+        }
+
+     }
+}
+
+         
