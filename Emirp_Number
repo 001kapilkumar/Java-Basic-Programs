@@ -1,0 +1,45 @@
+import java.util.*;
+public class Emirp_Number {
+
+       // System.out.println(num/2);
+        static boolean isPrime(int num){
+            int digit = 0 ;
+            int d = 0;
+            if(num==1){
+                return false;
+           }
+            for(int i = 2 ; i<num ; i++){
+                if(num % i == 0 ){
+                    digit++;
+                }
+                else{
+                    int digi = 0;
+                }
+            }
+            return(digit == 0);
+
+
+        }
+    public static void main(String[] args){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a value");
+            int value = sc.nextInt();
+            int sum = 0;
+            int v = value ;
+            while(value>0){
+                int r = value%10 ;
+                sum = sum*10+r;
+                value = value/10 ;
+
+            }
+            value = v;
+           // System.out.println("sum be " + sum) ;
+        if (isPrime(value) && isPrime(sum))  {
+            System.out.println(" Emirp Number");
+        }
+        else{
+            System.out.println(" Not Emirp Number");
+        }
+
+    }
+}
