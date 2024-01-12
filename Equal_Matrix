@@ -1,0 +1,34 @@
+import java.util.*;
+public class Equal_Matrix {
+    public static void main(String[] args) {
+        int[][] a = {
+                {1, 2, 3},
+                {3, 1, 2},
+                {5, 4, 6}
+        };
+        int[][] b = {
+                {1, 2, 3},
+                {3, 1, 2},
+                {5, 4, 8 }
+        };
+
+
+        int digit = 0;
+        if (a.length == b.length && a[0].length == b[0].length) {
+            for (int i = 0; i <a.length;i++){
+                for(int j = 0; j<b[0].length;j++){
+                    if(a[i][j] == b[i][j]){
+                        digit++ ;
+                    }
+                }
+            }
+        }
+        if(digit == a.length*a[0].length){
+            System.out.println("Equal matrix");
+        }
+        else{
+            System.out.println("Unequal matrix");
+        }
+      //  System.out.println(digit);
+    }
+}
