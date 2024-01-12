@@ -1,0 +1,99 @@
+import java.util.*;
+public class import java.util.*;
+public class Krishnamurthy_Number {
+    static boolean isKrishnamurthy(int num ){
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        int n = num;
+        while(num>0){
+            int r = num % 10 ;
+            list.add(r) ;
+            num = num / 10 ;
+
+        }
+
+
+        int length = list.size();
+        int sum = 0;
+        for(int i = 0; i < length; i++) {
+            int num1 = list.get(i);
+            int fact = 1;
+            for (int j = 1; j <= num1; j++) {
+                fact = fact * j;
+               // System.out.println(fact);
+
+            }
+            sum = sum + fact;
+            // System.out.println(sum);
+
+
+        }
+        //System.out.println(sum) ;
+
+        return(sum == n) ;
+        }
+
+        public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a start number");
+
+        int start = sc.nextInt() ;
+            //Scanner sc1 = new Scanner(System.in);
+           System.out.println("Enter end number");
+
+        int end = sc.nextInt();
+        for(int z = start ; z < end ; z++){
+            if(isKrishnamurthy(z)){
+                System.out.println(z);
+            }
+            else{
+                System.out.print("");
+            }
+        } {
+    static boolean isKrishnamurthy(int num ){
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        int n = num;
+        while(num>0){
+            int r = num % 10 ;
+            list.add(r) ;
+            num = num / 10 ;
+
+        }
+
+
+        int length = list.size();
+        int sum = 0;
+        for(int i = 0; i < length; i++) {
+            int num1 = list.get(i);
+            int fact = 1;
+            for (int j = 1; j <= num1; j++) {
+                fact = fact * j;
+               // System.out.println(fact);
+
+            }
+            sum = sum + fact;
+            // System.out.println(sum);
+
+
+        }
+        //System.out.println(sum) ;
+
+        return(sum == n) ;
+        }
+
+        public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a start number");
+
+        int start = sc.nextInt() ;
+            //Scanner sc1 = new Scanner(System.in);
+           System.out.println("Enter end number");
+
+        int end = sc.nextInt();
+        for(int z = start ; z < end ; z++){
+            if(isKrishnamurthy(z)){
+                System.out.println(z);
+            }
+            else{
+                System.out.print("");
+            }
+        }
