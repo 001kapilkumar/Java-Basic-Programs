@@ -1,0 +1,11 @@
+public class Array_Creation {
+    public static void main(String [] args){
+        int [] arr = new int[5] ;
+        arr[1] = 678;
+        int [] arr1 = { 1,8,9,0,56} ;
+        int [] arr2 = new int [] { 4,5,3,5,67,89};
+        System.out.println(arr[3] ) ;
+        System.out.println(arr1.length) ;
+        System.out.println(arr2.length) ;
+    }
+}
