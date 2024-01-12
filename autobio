@@ -1,0 +1,39 @@
+import java.util.*;
+public class autobio {
+    public static void main(String [] args){
+
+                ArrayList<Integer> list = new ArrayList<Integer>() ;
+                int digits = 0;
+                int number = 0;
+               int  num = 1210;
+                int n = num ;
+                while(num>0){
+                    int r = num% 10 ;
+                    list.add(r) ;
+                    num = num / 10 ;
+                    if(r>0){
+                        digits  ++ ;
+                    }
+                    number++ ;
+
+                }
+                Collections.reverse(list) ;
+                System.out.println("list " + list.get(0)) ;
+        System.out.println("list " + list.get(1)) ;
+        System.out.println("list " + list.get(2)) ;
+        System.out.println("list " + list.get(3)) ;
+                System.out.println(digits) ;
+                int sum = 0;
+                for(int i = 1; i<number ; i++){
+                    sum = sum + list.get(i);
+                }
+                System.out.println("Sum be " + sum);
+                int minus = sum - list.get(0);
+                System.out.println("minus be" +minus);
+                //return(minus == digits) ;
+
+
+
+
+    }
+}
