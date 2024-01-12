@@ -1,0 +1,7 @@
+public class Number_Of_Elements_In_Array {
+    public static void main(String [] args){
+        int [] arr = new int[] {12,34,21,32,56,43};
+        System.out.println("Number of elements in array are ");
+    System.out.println(arr.length);
+    }
+}
