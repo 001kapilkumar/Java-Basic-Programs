@@ -1,0 +1,47 @@
+import java.util.*;
+public class Divide_String_Into_Equal_Parts {
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your string ");
+        String s = sc.nextLine();
+        System.out.println("In how many parts you want to divide string ");
+        int n = sc.nextInt();
+       // System.out.println(s.length());
+
+        int n1 = s.length() /n ;
+        int digit = 0;
+        ArrayList<String> list = new ArrayList<String>();
+        for(int i = 0;i<s.length();i++){
+            list.add(String.valueOf(s.charAt(i))) ;
+        }
+        //System.out.println(list);
+      //  System.out.println("Size of list be" + list.size()) ;
+       // list.remove(1);
+      //  System.out.println(list);
+
+        if(s.length() % n == 0 ) {
+            while(list.size()>0){
+                for(int i = 0; i<n1;i++){
+                    System.out.print(list.get(0) );
+                    list.remove(0) ;
+                }
+
+               // System.out.println(list.size());
+                System.out.println();
+
+            }
+        }
+        else{
+            System.out.println("String cannot be divided in "+ n + " parts");
+        }
+       // System.out.println(n1);
+
+
+
+
+
+
+
+    }
+}
