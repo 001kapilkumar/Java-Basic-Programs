@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+
+public class Smallest_Element_In_Array {
+    public static void main(String[] args){
+        int[] arr = new int[] {90,89,1,2,1,3,2,1,2,1,3,4,6,8,5,2,8,5} ;
+        System.out.println(" Array before sorting ") ;
+        ArrayList<Integer> arr1 = new ArrayList<Integer>() ;
+        for(int i = 0; i<arr.length ; i++){
+            System.out.print(arr[i] + " ") ;
+        }
+        // System.out.println(arr.length) ;
+        for(int i = 0; i<arr.length;i++){
+            int digit = 0;
+            // temp = arr[i] ;
+            for(int j = 0; j<i; j++){
+                if(arr[i] == arr[j]){
+                    digit++;
+
+                }
+            }
+            if(digit == 0){
+                arr1.add(arr[i]) ;
+
+            }
+        }
+        System.out.println() ;
+        System.out.println("list without duplicate element be ") ;
+        System.out.print(arr1) ;
+        int [] arr2 = new int[arr1.size()] ;
+        for(int i = 0; i<arr1.size() ; i++){
+            arr2[i] = arr1.get(i) ;
+        }
+        int temp ;
+        for(int i = 0; i<arr2.length ; i++){
+            for(int j = i+1 ;j<arr2.length ;j++){
+                if(arr2[i] <arr2[j]){
+                    temp = arr2[i] ;
+                    arr2[i] = arr2[j] ;
+                    arr2[j] = temp ;
+                }
+            }
+        }
+        System.out.println() ;
+        System.out.println(" Array after sorted in descending order") ;
+        for(int i = 0 ;i<arr2.length ;i++){
+            System.out.print(arr2[i] + " ");
+        }
+        System.out.println();
+        System.out.println(" samallest Element of array be ");
+        System.out.println(arr2[arr2.length-1]) ;
+    }
+}
