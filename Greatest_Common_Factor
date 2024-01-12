@@ -1,0 +1,31 @@
+import java.util.*;
+public class Greatest_Common_Factor {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a first number ") ;
+        int a = sc.nextInt() ;
+        System.out.println("Enter a second number ");
+        int b = sc.nextInt();
+        int c = (a+b)/2 ;
+        int d = 0;
+        if(a>b) {
+            for( int i = 1 ; i<a ; i++){
+                if(a % i ==0 && b % i == 0){
+                    d = i ;
+                }
+            }
+            System.out.println("Greatest Common factor be " + d);
+        }
+        else{
+            {
+                for( int i = 1 ; i<b ; i++){
+                    if(a % i ==0 && b % i == 0){
+                        d = i ;
+                    }
+                }
+                System.out.println("Greatest Common factor be " + d);
+            }
+        }
+
+    }
+}
