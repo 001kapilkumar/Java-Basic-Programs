@@ -1,0 +1,49 @@
+import javax.print.DocFlavor;
+import java.util.* ;
+public class Bouncy_Number {
+    static boolean isBouncy_Number(String s){
+        ArrayList<String> list = new ArrayList<String>() ;
+      //  int n = num ;
+        /*while(num>0){
+            int r = num % 10 ;
+            list.add(r) ;
+            num = num/10 ;
+        }
+         */
+        for(int q = 0; q< s.length() ;q++){
+            char l = s.charAt(q) ;
+            String m = String.valueOf(l);
+            list.add(m);
+        }
+        int digit = 0;
+        int digi = 0;
+        Collections.reverse(list);
+        int length = list.size() ;
+        for(int i = 1; i< length ; i++){
+            //char c = list.get(0);
+            int e = Integer.parseInt(String.valueOf(list.get(0)));
+            int f = Integer.parseInt(String.valueOf(list.get(i)));
+            if(e >=f  ){
+                digit ++ ;
+            }
+            else{
+                digi ++ ;
+            }
+        }
+        System.out.println(digit);
+        return (digit != (length-1) && digit != 0) ;
+
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number");
+        String value = sc.nextLine();
+        if(isBouncy_Number(value)){
+            System.out.println("Bouncy Number");
+        }
+        else{
+            System.out.println("Not Bouncy Number ");
+        }
+
+    }
+}
