@@ -1,0 +1,37 @@
+import java.util.*;
+public class Mystery_Number {
+    static int  reverse(int x ){
+        String str = Integer.toString(x) ;
+       // System.out.println("String str be " + str);
+        int l = str.length() ;
+        String s = "" ;
+        for(int i = l-1; i>=0 ; i--) {
+            s = s +str.charAt(i);
+        }
+      //  System.out.println(" s reverse of str be " + s) ;
+        int rev = Integer.parseInt(s) ;
+        return rev ;
+        //System.out.println("rev integer  be " + rev) ;
+    }
+    static boolean isMystery(int num){
+        for(int j = 1 ; j<= num/2 ; j++) {
+            int z = reverse(j);
+
+            if (z + j == num) {
+                return true;
+            }
+        }
+        return false ;
+    }
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number");
+        int value = sc.nextInt() ;
+        if(isMystery(value) ){
+            System.out.println("Mystery Number ");
+        }
+        else{
+            System.out.println("Not Mystery Number") ;
+        }
+    }
+}
