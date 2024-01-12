@@ -1,0 +1,25 @@
+import java.util.*;
+public class Array_Deletion {
+    public static void main(String[] args){
+        int [] arr1 = new int[] {1,2,3,4,5,6} ;
+        System.out.println(" Original Array be ") ;
+        System.out.print(Arrays.toString(arr1)) ;
+        System.out.println() ;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter which element you want to delete") ;
+        int a = sc.nextInt() ;
+        int [] arr2 = new int[arr1.length-1];
+        int k = 0;
+        for(int i = 0; i<arr1.length ; i++){
+            if(arr1[i] != a){
+                arr2[k] = arr1[i] ;
+                k++ ;
+            }
+        }
+       // System.out.print(Arrays.toString(arr1)) ;
+      //  System.out.println();
+        System.out.println(" Array after deletion") ;
+        System.out.println(Arrays.toString(arr2)) ;
+
+    }
+}
