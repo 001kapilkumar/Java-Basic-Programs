@@ -1,0 +1,28 @@
+public class TriangleStarPattern {
+    public static void main(String [] args){
+        int i,k,j;
+
+        for(i=1;i<5;i++){
+            for(k=1;k<5;k++){
+                System.out.print(" ");
+            }
+
+          for(j=1;j<=(2*i-1);j++) {
+              if (j == 1 || j== 5 || j == (2 * i - 1)) {
+
+                  System.out.print("* ");
+              }
+              else{
+                  System.out.print(" ");
+              }
+
+          }
+            System.out.println();
+
+
+
+        }
+
+
+    }
+}
