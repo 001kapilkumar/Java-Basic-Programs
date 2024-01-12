@@ -1,0 +1,9 @@
+public class IntegerToString {
+    public static void main(String[] args){
+        int num = 1024 ;
+        String s = String.valueOf(num);
+
+        System.out.println(s) ;
+
+    }
+}
