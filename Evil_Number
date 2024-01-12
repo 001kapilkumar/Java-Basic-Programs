@@ -1,0 +1,39 @@
+import java.util.*;
+public class Evil_Number {
+    public static boolean isEvil(int num){
+        //int num = 31;
+        String a = Integer.toBinaryString(num) ;
+        int length = a.length() ;
+        int digit = 0;
+        int digi = 0;
+        for(int i = 0; i< length ; i++){
+            char m = a.charAt(i);
+            int n = Integer.parseInt(String.valueOf(m));
+            if(n == 1){
+                digit++ ;
+
+            }
+
+        }
+        System.out.println(digit) ;
+        if(digit % 2 == 0){
+            return true ;
+        }
+        else{
+            return false ;
+        }
+
+    }
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number to check for evil number ");
+        int value = sc.nextInt() ;
+        if(isEvil(value)){
+            System.out.println("E   vil number ");
+        }
+        else{
+            System.out.println("Not Evil Number");
+        }
+
+    }
+}
