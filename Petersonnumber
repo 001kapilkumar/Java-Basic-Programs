@@ -1,0 +1,35 @@
+import java.util.*;
+public class Petersonnumber {
+
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number ");
+        int b = sc.nextInt();
+        int a= b;
+       int  sum =0;
+        while(a>0){
+
+            int r = a%10;
+            a = a/10 ;
+            //System.out.println(r);
+            int k = r;
+            int g = r;
+        for(int i = 1; i< g; i++){
+            k = k*i ;
+
+        }
+        //System.out.println(k);
+        sum = sum +k ;
+
+        }
+       // System.out.println(sum);
+
+        if (sum==b){
+            System.out.print("  Peterson number " );
+        }
+        else{
+            System.out.print(" Not a peterson number" );
+        }
+
+    }
+}
