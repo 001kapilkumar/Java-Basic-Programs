@@ -1,0 +1,31 @@
+import java.util.*;
+public class Stronito_Number {
+    static boolean isStronito(int x){
+        int n = x * 2;
+        String s = String.valueOf(x) ;
+        int length = s.length() ;
+            String s1 = String.valueOf(n);
+            int length1 = s1.length();
+            return ((s1.charAt(length1 - 2) == s1.charAt(length1 - 3))) ;
+        }
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a start");
+        int value = sc.nextInt() ;
+        String ss = String.valueOf(value);
+        int l =   ss.length() ;
+
+        if(l == 4) {
+                if (isStronito(value)) {
+                    System.out.println("Stronito Number ");
+                } else {
+                    System.out.print("Not Stronito number");
+                }
+
+        }
+        else{
+            System.out.println("Enter four digit number");
+        }
+    }
+}
