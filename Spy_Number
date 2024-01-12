@@ -1,0 +1,36 @@
+
+import java.util.*;
+public class Spy_Number {
+    static boolean isSpy_Number(int num){
+       // int num = 1124 ;
+        int sum = 0 ;
+        int product = 1;
+        while(num>0){
+            int r = num %10 ;
+            sum = sum + r ;
+            product = product*r ;
+            num = num / 10 ;
+
+        }
+        if(sum == product) {
+            return true;
+        }
+        return false;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a start number    ");
+        int start = sc.nextInt();
+        //Scanner sc1 = new Scanner(System.in);
+        System.out.print("Enter a end number  ");
+        int end = sc.nextInt();
+        for(int i = start ; i<=end ; i++){
+            if(isSpy_Number(i)){
+                System.out.println(i);
+            }
+            else{
+                System.out.print("");
+            }
+        }
+    }
+}
