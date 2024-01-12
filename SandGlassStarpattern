@@ -1,0 +1,24 @@
+public class SandGlassStarpattern {
+    public static void main(String [] args){
+        int i,j,k;
+        int row = 6;
+        for(i=0;i<row;i++){
+            for(k=0;k<i;k++){
+                System.out.print(" ");
+            }
+            for(j=4;j>=i;j--){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for(i=2;i<row;i++){ // row = 6
+            for(k=5;k>=i;k--){
+                System.out.print(" ");
+            }
+            for(j=1;j<=i;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
