@@ -1,0 +1,17 @@
+import java.util.*;
+public class Array_Dulpicate_Number_Deletion {
+    public static void main(String[] args){
+        int [] arr = new int[] {1,2,3,4,5,6,2,2,7,8,2} ;
+        System.out.println(" Original Array be ");
+        System.out.println(Arrays.toString(arr)) ;
+        ArrayList<Integer> list = new ArrayList <Integer>() ;
+        for(int i = 0; i<arr.length; i++){
+            if(arr[i] != 2){
+                list.add(arr[i]) ;
+            }
+        }
+        System.out.println("Array after deletion be ");
+        System.out.println(list) ;
+
+    }
+}
