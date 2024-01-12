@@ -1,0 +1,29 @@
+import java.util.*;
+public class Technumber {
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number to be check for a tech number");
+        int num = sc.nextInt();
+        int digits = 0;
+        int n = num ;
+        while(num>0){
+            int r = num% 10;
+            num = num / 10;
+            digits ++;
+
+        }
+        num = n;
+        if(digits % 2 == 0){
+            int firsthalf = num / (int)Math.pow(10,digits);
+            int secondhalf = num % (int)Math.pow(10,digits);
+            int Square = (firsthalf+secondhalf) *(firsthalf+secondhalf) ;
+            if(Square == num){
+                System.out.println("Tech number");
+            }
+            else{System.out.println("Not a tech Number");
+            }
+        }
+
+
+    }
+}
